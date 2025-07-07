@@ -1,7 +1,11 @@
+import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 
 const Produtos = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const images = [
     "/lovable-uploads/1751640567044_1_scene_babasoul.png",
     "/lovable-uploads/1751640567388_2_fabulous_003.png", 
