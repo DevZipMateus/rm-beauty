@@ -7,38 +7,49 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    /* Base colors - Beauty theme */
+    --background: 35 20% 97%; /* Off-white/bege claro */
+    --foreground: 20 15% 25%; /* Marrom café escuro para texto */
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 20 15% 25%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover-foreground: 20 15% 25%;
     
-    --secondary: 210 40% 98%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Secondary colors */
+    --secondary: 35 25% 92%; /* Cinza-claro aquecido */
+    --secondary-foreground: 20 15% 25%;
+    --muted: 35 20% 90%;
+    --muted-foreground: 25 12% 45%;
     
-    --primary: 142 70% 45%;
+    /* Primary - Marrom taupe da logo */
+    --primary: 25 20% 60%; /* Marrom taupe */
     --primary-foreground: 0 0% 100%;
-    --accent: 47 96% 53%;
-    --accent-foreground: 26 83% 14%;
+    
+    /* Accent - Marrom chocolate intenso para destaque */
+    --accent: 20 25% 35%; /* Marrom chocolate intenso */
+    --accent-foreground: 0 0% 100%;
+    
+    /* Beauty-specific colors */
+    --beauty-warm: 30 30% 75%; /* Tom aquecido */
+    --beauty-warm-foreground: 20 15% 25%;
+    --beauty-highlight: 15 35% 25%; /* Destaque elegante */
+    --beauty-highlight-foreground: 0 0% 100%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 142 70% 45%;
-    --radius: 0.5rem;
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 25 20% 60%;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 222 91.2% 59.8%;
+    --sidebar-background: 35 20% 97%;
+    --sidebar-foreground: 20 15% 25%;
+    --sidebar-primary: 25 20% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 25% 92%;
+    --sidebar-accent-foreground: 20 15% 25%;
+    --sidebar-border: 35 20% 85%;
+    --sidebar-ring: 25 20% 60%;
   }
 }
 
@@ -159,13 +170,13 @@ html {
   }
 }
 
-/* Agricultural Theme Enhancements */
+/* Beauty Theme Enhancements */
 .hero-overlay {
   background: linear-gradient(
     135deg,
-    rgba(34, 197, 94, 0.8) 0%,
-    rgba(21, 128, 61, 0.9) 50%,
-    rgba(22, 101, 52, 0.95) 100%
+    hsl(var(--primary) / 0.8) 0%,
+    hsl(var(--accent) / 0.9) 50%,
+    hsl(var(--beauty-highlight) / 0.95) 100%
   );
 }
 
@@ -177,7 +188,7 @@ html {
 
 .service-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 25px 50px hsl(var(--accent) / 0.15);
 }
 
 /* Product Card Hover Effects */
@@ -187,7 +198,7 @@ html {
 }
 
 .product-card:hover {
-  box-shadow: 0 20px 40px rgba(34, 197, 94, 0.15);
+  box-shadow: 0 20px 40px hsl(var(--primary) / 0.15);
 }
 
 .product-card:hover .product-image {
@@ -198,26 +209,26 @@ html {
   transition: transform 0.5s ease;
 }
 
-/* Agricultural Color Gradients */
-.agro-gradient {
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #15803d 100%);
+/* Beauty Color Gradients */
+.beauty-gradient {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
 }
 
-.earth-gradient {
-  background: linear-gradient(135deg, #a3a3a3 0%, #737373 50%, #525252 100%);
+.warm-gradient {
+  background: linear-gradient(135deg, hsl(var(--beauty-warm)), hsl(var(--primary)));
 }
 
 /* Enhanced Button Styles */
 .cta-button {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #22c55e, #16a34a);
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
   transition: all 0.3s ease;
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3);
+  box-shadow: 0 10px 20px hsl(var(--primary) / 0.3);
 }
 
 .cta-button:before {

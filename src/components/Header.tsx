@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -30,7 +29,7 @@ const Header = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5567987654321?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20implementos%20agrícolas.', '_blank');
+    window.open('https://wa.me/5511947641998?text=Olá!%20Gostaria%20de%20conhecer%20mais%20sobre%20os%20produtos%20da%20RmBeauty.', '_blank');
   };
 
   return (
@@ -43,10 +42,18 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between">
-          <a href="#" className="relative z-20">
-            <h1 className="text-xl md:text-2xl font-display font-bold text-foreground">
-              <span className="text-primary">AgroTech</span> Implementos
-            </h1>
+          <a href="#" className="relative z-20 flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/c1fe7bed-02ff-4ffc-aca3-e3500f3daae4.png" 
+              alt="RmBeauty Logo" 
+              className="w-10 h-10 object-contain"
+            />
+            <div>
+              <h1 className="text-xl md:text-2xl font-display font-bold text-foreground">
+                RmBeauty
+              </h1>
+              <p className="text-xs text-muted-foreground hidden md:block">Distribuidora</p>
+            </div>
           </a>
 
           {/* Desktop Menu */}
@@ -58,7 +65,7 @@ const Header = () => {
           <div className="hidden md:flex items-center">
             <Button 
               onClick={handleWhatsAppClick}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground cta-button"
             >
               Solicitar Orçamento
             </Button>
@@ -79,7 +86,7 @@ const Header = () => {
                   <SheetClose asChild>
                     <Button 
                       onClick={handleWhatsAppClick}
-                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-4"
+                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-4 cta-button"
                     >
                       Solicitar Orçamento
                     </Button>
@@ -102,9 +109,11 @@ interface NavLinksProps {
 const NavLinks = ({ mobile, onClick }: NavLinksProps) => {
   const links = [
     { name: 'Início', href: '#hero' },
-    { name: 'Produtos', href: '#products' },
-    { name: 'Marcas', href: '#brands' },
-    { name: 'Sobre Nós', href: '#about' },
+    { name: 'Sobre', href: '#about' },
+    { name: 'Serviços', href: '#services' },
+    { name: 'Planos', href: '#plans' },
+    { name: 'Depoimentos', href: '#testimonials' },
+    { name: 'Localização', href: '#location' },
     { name: 'Contato', href: '#contact' },
   ];
 
