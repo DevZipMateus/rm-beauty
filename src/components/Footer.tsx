@@ -16,10 +16,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <h3 className="text-xl font-bold mb-4">
-              <span className="text-primary">AgroTech</span> Implementos
+              <span className="text-primary">RmBeauty</span> Distribuidora
             </h3>
             <p className="text-white/80 max-w-xs">
-              Soluções completas em implementos agrícolas, máquinas e equipamentos para o agronegócio.
+              Distribuidora de produtos de beleza, higiene pessoal, perfumaria e acessórios para fortalecer seu negócio.
             </p>
             <div className="flex space-x-4 mt-6">
               <FooterSocialLink href="#" aria-label="Facebook" />
@@ -32,31 +32,31 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
             <ul className="space-y-2">
               <FooterNavItem href="#hero">Início</FooterNavItem>
-              <FooterNavItem href="#categories">Produtos</FooterNavItem>
-              <FooterNavItem href="#brands">Marcas</FooterNavItem>
+              <FooterNavItem href="/produtos">Produtos</FooterNavItem>
               <FooterNavItem href="#about">Sobre Nós</FooterNavItem>
+              <FooterNavItem href="#services">Serviços</FooterNavItem>
               <FooterNavItem href="#contact">Contato</FooterNavItem>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Categorias</h4>
+            <h4 className="text-lg font-semibold mb-4">Produtos</h4>
             <ul className="space-y-2">
-              <FooterNavItem href="#categories">Máquinas e Tratores</FooterNavItem>
-              <FooterNavItem href="#categories">Sementes e Mudas</FooterNavItem>
-              <FooterNavItem href="#categories">Defensivos e Fertilizantes</FooterNavItem>
-              <FooterNavItem href="#categories">Peças e Assistência</FooterNavItem>
+              <FooterNavItem href="/produtos">Higiene Pessoal</FooterNavItem>
+              <FooterNavItem href="/produtos">Perfumaria</FooterNavItem>
+              <FooterNavItem href="/produtos">Maquiagem</FooterNavItem>
+              <FooterNavItem href="/produtos">Acessórios</FooterNavItem>
             </ul>
           </div>
 
           <div>
             <h4 className="text-lg font-semibold mb-4">Contato</h4>
             <ul className="space-y-3 text-white/80">
-              <li>(11) 3456-7890</li>
-              <li>contato@agrotechimplementos.com.br</li>
-              <li>Rod. BR-163, Km 85, Campo Grande - MS</li>
-              <li>Segunda a Sexta, 7h às 17h</li>
-              <li>Sábado, 8h às 12h</li>
+              <li>(11) 94764-1998</li>
+              <li>contato@rmbeauty.com.br</li>
+              <li>São Paulo - SP</li>
+              <li>Segunda a Sexta, 8h às 18h</li>
+              <li>Sábado, 8h às 14h</li>
             </ul>
           </div>
         </div>
@@ -65,7 +65,7 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/70 text-sm">
-            © {new Date().getFullYear()} AgroTech Implementos. Todos os direitos reservados.
+            © {new Date().getFullYear()} RmBeauty Distribuidora. Todos os direitos reservados.
           </p>
           <div className="mt-4 md:mt-0">
             <Button

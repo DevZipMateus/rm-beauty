@@ -1,32 +1,31 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: "João Henrique Silva",
-    company: "Fazenda Santa Rita",
+    name: "Maria Silva",
+    company: "Loja Bella Vita",
     image: "/placeholder.svg",
-    text: "A AgroTech transformou nossa operação de plantio. Os implementos que adquirimos aumentaram nossa produtividade em 30% e a assistência técnica é excepcional. Recomendo para todos os produtores da região."
+    text: "A RmBeauty revolucionou minha loja! Os produtos chegam sempre em perfeito estado e os preços são excelentes. Meus clientes adoram a qualidade dos perfumes e cosméticos. Recomendo para todos os lojistas."
   },
   {
-    name: "Maria Fernanda Costa",
-    company: "Agropecuária Três Irmãos",
+    name: "Ana Carolina Santos",
+    company: "Farmácia & Perfumaria Central",
     image: "/placeholder.svg",
-    text: "Trabalho com a AgroTech há mais de 5 anos e nunca me decepcionaram. Equipamentos de primeira qualidade, preços justos e um atendimento que realmente entende as necessidades do campo."
+    text: "Trabalho com a RmBeauty há mais de 3 anos e a parceria só cresce. Produtos de primeira linha, entrega pontual e um atendimento que realmente entende as necessidades do mercado de beleza."
   },
   {
-    name: "Roberto Almeida",
-    company: "Fazenda Boa Vista",
+    name: "Carlos Eduardo Oliveira",
+    company: "Distribuidora Beleza & Cia",
     image: "/placeholder.svg",
-    text: "Os tratores e implementos que compramos da AgroTech têm sido fundamentais para o sucesso da nossa safra. A equipe técnica nos orientou na escolha certa e o suporte pós-venda é exemplar."
+    text: "Os produtos da RmBeauty têm sido fundamentais para o sucesso das nossas vendas. A variedade de marcas e a qualidade dos itens nos permitiu ampliar significativamente nossa clientela."
   },
   {
-    name: "Carlos Eduardo Souza",
-    company: "Sítio Esperança Verde",
+    name: "Fernanda Costa",
+    company: "Salão Beauty Express",
     image: "/placeholder.svg",
-    text: "Como pequeno produtor, encontrei na AgroTech um parceiro que oferece soluções adequadas ao meu orçamento. Consegui modernizar minha propriedade com equipamentos de qualidade e financiamento facilitado."
+    text: "Como pequena empresária, encontrei na RmBeauty um parceiro que oferece produtos de qualidade com preços justos. Consegui diversificar meu salão com uma linha completa de cosméticos e perfumes."
   }
 ];
 
@@ -92,11 +91,11 @@ const TestimonialsSection = () => {
             Depoimentos
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-on-scroll">
-            O Que Nossos Clientes Dizem
+            O Que Nossos Parceiros Dizem
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto animate-on-scroll">
-            Atendimento especializado e equipamentos de qualidade são nossa marca registrada.
-            Veja o que nossos parceiros do agronegócio têm a dizer sobre nossos serviços.
+            Atendimento especializado e produtos de qualidade são nossa marca registrada.
+            Veja o que nossos parceiros do setor de beleza têm a dizer sobre nossos serviços.
           </p>
         </div>
 

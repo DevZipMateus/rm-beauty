@@ -29,25 +29,25 @@ const ContactSection = () => {
     {
       icon: <Phone className="h-5 w-5 text-primary" />,
       title: "Telefone",
-      details: "(67) 3345-6789",
-      link: "tel:+556733456789"
+      details: "(11) 94764-1998",
+      link: "tel:+5511947641998"
     },
     {
       icon: <Mail className="h-5 w-5 text-primary" />,
       title: "E-mail",
-      details: "vendas@agrotechimplementos.com.br",
-      link: "mailto:vendas@agrotechimplementos.com.br"
+      details: "contato@rmbeauty.com.br",
+      link: "mailto:contato@rmbeauty.com.br"
     },
     {
       icon: <MapPin className="h-5 w-5 text-primary" />,
       title: "Endereço",
-      details: "Rod. BR-163, Km 85, Campo Grande - MS",
+      details: "São Paulo - SP",
       link: "https://maps.google.com"
     },
     {
       icon: <Clock className="h-5 w-5 text-primary" />,
       title: "Horário",
-      details: "Segunda a Sexta, 7h às 17h | Sábado, 8h às 12h",
+      details: "Segunda a Sexta, 8h às 18h | Sábado, 8h às 14h",
       link: null
     }
   ];
@@ -67,8 +67,8 @@ const ContactSection = () => {
             Estamos Prontos para Atender Você
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto animate-on-scroll">
-            Entre em contato conosco para orçamentos, assistência técnica ou informações sobre nossos implementos agrícolas.
-            Nossa equipe especializada está à disposição para ajudar no crescimento da sua propriedade rural.
+            Entre em contato conosco para orçamentos, informações sobre produtos ou para se tornar um parceiro distribuidor.
+            Nossa equipe especializada está à disposição para fortalecer o seu negócio com produtos de beleza de qualidade.
           </p>
         </div>
 
@@ -76,12 +76,12 @@ const ContactSection = () => {
           <Card className="border border-border/50 shadow-card animate-on-scroll">
             <CardContent className="p-8">
               <div className="grid md:grid-cols-2 gap-10">
-                <div>
-                  <h3 className="text-2xl font-bold mb-6">Informações de Contato</h3>
-                  <p className="text-muted-foreground mb-8">
-                    Para solicitar orçamentos de implementos, agendar assistência técnica ou conhecer nossos produtos,
-                    utilize um dos canais de atendimento abaixo. Atendemos produtores rurais de todo o Centro-Oeste.
-                  </p>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-6">Informações de Contato</h3>
+                    <p className="text-muted-foreground mb-8">
+                      Para solicitar orçamentos de produtos de beleza, conhecer nossa linha completa ou se tornar um parceiro,
+                      utilize um dos canais de atendimento abaixo. Atendemos todo o território nacional.
+                    </p>
                   
                   <div className="space-y-6 mb-8">
                     {contactInfo.map((item, index) => (
@@ -115,7 +115,7 @@ const ContactSection = () => {
                     </div>
                     <h3 className="text-xl font-bold mb-3">Prefere atendimento via WhatsApp?</h3>
                     <p className="text-muted-foreground mb-6">
-                      Clique no botão do WhatsApp no canto inferior direito da tela para falar diretamente com nossos especialistas em implementos agrícolas e receber atendimento personalizado.
+                      Clique no botão do WhatsApp no canto inferior direito da tela para falar diretamente com nossos especialistas em produtos de beleza e receber atendimento personalizado.
                     </p>
                     <div className="text-sm text-muted-foreground">
                       Tempo médio de resposta: <span className="font-medium text-foreground">15 minutos</span>
@@ -131,13 +131,13 @@ const ContactSection = () => {
           <Card className="border border-border/50 shadow-card overflow-hidden">
             <div className="h-[400px] w-full">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3739.123456789!2d-54.6164919!3d-20.4629581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9486e1b123456789%3A0x123456789abcdef!2sBR-163%2C%20Campo%20Grande%20-%20MS!5e0!3m2!1spt-BR!2sbr!4v1627909542948!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0944!2d-46.633308585025!3d-23.550520684693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59541c6c79c3%3A0x36b90a85f0f8cb36!2sS%C3%A3o%20Paulo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1627909542948!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
-                title="Mapa de localização - AgroTech Implementos"
+                title="Mapa de localização - RmBeauty Distribuidora"
               ></iframe>
             </div>
           </Card>
