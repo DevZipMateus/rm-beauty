@@ -80,11 +80,13 @@ const ProductCarousel = () => {
             Confira alguns dos produtos de nossa linha de beleza
           </p>
           <Button 
-            onClick={() => window.location.href = '/produtos'}
+            asChild
             className="bg-primary hover:bg-primary/90 text-primary-foreground"
           >
-            Ver Todos os Produtos
-            <ArrowRight className="ml-2 h-4 w-4" />
+            <a href="/produtos">
+              Ver Todos os Produtos
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
           </Button>
         </div>
 
