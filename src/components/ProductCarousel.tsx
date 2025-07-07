@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import * as React from "react";
+import { Link } from 'react-router-dom';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import type { CarouselApi } from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
@@ -83,10 +84,10 @@ const ProductCarousel = () => {
             asChild
             className="bg-primary hover:bg-primary/90 text-primary-foreground"
           >
-            <a href="/produtos">
+            <Link to="/produtos">
               Ver Todos os Produtos
               <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
+            </Link>
           </Button>
         </div>
 
