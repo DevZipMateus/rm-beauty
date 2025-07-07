@@ -54,6 +54,17 @@ const TestimonialsSection = () => {
     };
   }, []);
 
+  // Auto-play carousel every 6 seconds
+  useEffect(() => {
+    const autoPlayInterval = setInterval(() => {
+      if (!isTransitioning) {
+        setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+      }
+    }, 6000);
+
+    return () => clearInterval(autoPlayInterval);
+  }, [isTransitioning]);
+
   const handlePrev = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
