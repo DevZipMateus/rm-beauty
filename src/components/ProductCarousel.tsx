@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react';
 import * as React from "react";
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import type { CarouselApi } from '@/components/ui/carousel';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
 const ProductCarousel = () => {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -45,11 +47,6 @@ const ProductCarousel = () => {
     "/lovable-uploads/1751640593267_35_dsc_6585.jpg",
     "/lovable-uploads/1751640594243_36_dsc_6622.jpg",
     "/lovable-uploads/1751640595154_37_dsc_6627.jpg",
-    "/lovable-uploads/b0e53f15-a099-4bb1-b233-49c1f725a92a.png",
-    "/lovable-uploads/b4a47583-54bb-4862-8ddb-715085bb1758.png",
-    "/lovable-uploads/c1fe7bed-02ff-4ffc-aca3-e3500f3daae4.png",
-    "/lovable-uploads/e5c365ac-2ba0-4157-bb97-d6821651fde1.png",
-    "/lovable-uploads/ed1a0b4e-6a76-423c-a8ab-cc75ca716c4b.png"
   ];
 
   useEffect(() => {
@@ -79,9 +76,16 @@ const ProductCarousel = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Nossos Produtos em Destaque
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
             Confira alguns dos produtos de nossa linha de beleza
           </p>
+          <Button 
+            onClick={() => window.location.href = '/produtos'}
+            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+          >
+            Ver Todos os Produtos
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
         </div>
 
         <Carousel 

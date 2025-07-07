@@ -46,11 +46,6 @@ const Produtos = () => {
     "/lovable-uploads/Captura de tela de 2025-07-07 11-39-21.png",
     "/lovable-uploads/Captura de tela de 2025-07-07 11-39-30.png",
     "/lovable-uploads/Captura de tela de 2025-07-07 11-39-40.png",
-    "/lovable-uploads/b0e53f15-a099-4bb1-b233-49c1f725a92a.png",
-    "/lovable-uploads/b4a47583-54bb-4862-8ddb-715085bb1758.png",
-    "/lovable-uploads/c1fe7bed-02ff-4ffc-aca3-e3500f3daae4.png",
-    "/lovable-uploads/e5c365ac-2ba0-4157-bb97-d6821651fde1.png",
-    "/lovable-uploads/ed1a0b4e-6a76-423c-a8ab-cc75ca716c4b.png"
   ];
 
   const handleWhatsAppClick = () => {
