@@ -112,7 +112,6 @@ const NavLinks = ({ mobile, onClick }: NavLinksProps) => {
     { name: 'Sobre', href: '#about' },
     { name: 'Serviços', href: '#services' },
     { name: 'Produtos', href: '/produtos' },
-    { name: 'Depoimentos', href: '#testimonials' },
     { name: 'Contato', href: '#contact' },
   ];
 
