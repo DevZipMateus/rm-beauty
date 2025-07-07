@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowLeft } from 'lucide-react';
 
 const Produtos = () => {
   const images = [
@@ -62,6 +62,18 @@ const Produtos = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Descubra nossa linha completa de produtos de beleza
           </p>
+          <div className="mt-8">
+            <Button 
+              asChild
+              variant="outline"
+              className="bg-background hover:bg-secondary/50"
+            >
+              <a href="/">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Voltar
+              </a>
+            </Button>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -84,6 +96,19 @@ const Produtos = () => {
               </Button>
             </div>
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <Button 
+            asChild
+            variant="outline"
+            className="bg-background hover:bg-secondary/50"
+          >
+            <a href="/">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Voltar
+            </a>
+          </Button>
         </div>
       </div>
     </div>
