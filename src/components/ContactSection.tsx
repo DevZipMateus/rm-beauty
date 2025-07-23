@@ -137,7 +137,7 @@ const ContactSection = () => {
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
-                title="Mapa de localização - RmBeauty Distribuidora - 21°20'41.2"S 49°30'11.6"W"
+                title="Mapa de localização - RmBeauty Distribuidora - Sales SP"
               ></iframe>
             </div>
           </Card>
