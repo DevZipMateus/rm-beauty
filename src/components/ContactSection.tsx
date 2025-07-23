@@ -131,13 +131,13 @@ const ContactSection = () => {
           <Card className="border border-border/50 shadow-card overflow-hidden">
             <div className="h-[400px] w-full">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8!2d-47.2775!3d-20.2962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b0a654e1e6c7c7%3A0x123456789!2sRua%20XV%20de%20Novembro%2C%20736%20-%20Jd.%20Europa%2C%20Sales%20-%20SP%2C%2014980-130!5e0!3m2!1spt-BR!2sbr!4v1642609534567!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.2!2d-49.5032!3d-21.3448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDIwJzQxLjIiUyA0OcKwMzAnMTEuNiJX!5e0!3m2!1spt-BR!2sbr!4v1642609534567!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
-                title="Mapa de localização - RmBeauty Distribuidora - Rua XV de Novembro 736, Jd. Europa, Sales/SP"
+                title="Mapa de localização - RmBeauty Distribuidora - 21°20'41.2"S 49°30'11.6"W"
               ></iframe>
             </div>
           </Card>
