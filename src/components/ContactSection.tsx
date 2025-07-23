@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Phone, Mail, MapPin, Clock, Linkedin, Facebook, Instagram } from 'lucide-react';
@@ -29,8 +30,8 @@ const ContactSection = () => {
     {
       icon: <Phone className="h-5 w-5 text-primary" />,
       title: "Telefone",
-      details: "(11) 94764-1998",
-      link: "tel:+5511947641998"
+      details: "(17) 98123-4748",
+      link: "tel:+5517981234748"
     },
     {
       icon: <Mail className="h-5 w-5 text-primary" />,

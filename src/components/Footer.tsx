@@ -52,7 +52,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contato</h4>
             <ul className="space-y-3 text-white/80">
-              <li>(11) 94764-1998</li>
+              <li>(17) 98123-4748</li>
               <li>contato@rmbeauty.com.br</li>
               <li>São Paulo - SP</li>
               <li>Segunda a Sexta, 8h às 18h</li>

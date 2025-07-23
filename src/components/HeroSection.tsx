@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, ArrowRight, Sparkles } from 'lucide-react';
@@ -21,7 +22,7 @@ const HeroSection = () => {
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5511947641998?text=Olá!%20Gostaria%20de%20conhecer%20mais%20sobre%20os%20produtos%20da%20RmBeauty.', '_blank');
+    window.open('https://wa.me/5517981234748?text=Olá!%20Gostaria%20de%20conhecer%20mais%20sobre%20os%20produtos%20da%20RmBeauty.', '_blank');
   };
 
   return (
