@@ -41,8 +41,8 @@ const ContactSection = () => {
     {
       icon: <MapPin className="h-5 w-5 text-primary" />,
       title: "Endereço",
-      details: "São Paulo - SP",
-      link: "https://maps.google.com"
+      details: "Rua XV de Novembro nº 736, Jd. Europa, Sales - SP, 14980-130",
+      link: "https://maps.google.com/?q=Rua+XV+de+Novembro+736+Jd+Europa+Sales+SP+14980-130"
     },
     {
       icon: <Clock className="h-5 w-5 text-primary" />,
@@ -131,13 +131,13 @@ const ContactSection = () => {
           <Card className="border border-border/50 shadow-card overflow-hidden">
             <div className="h-[400px] w-full">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0944!2d-46.633308585025!3d-23.550520684693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59541c6c79c3%3A0x36b90a85f0f8cb36!2sS%C3%A3o%20Paulo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1627909542948!5m2!1spt-BR!2sbr&markers=color:red%7Clabel:R%7C-23.550520684693,-46.633308585025"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dOWTgJWDrA1234&q=Rua+XV+de+Novembro+736+Jd+Europa+Sales+SP+14980-130&zoom=15&maptype=roadmap"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
-                title="Mapa de localização - RmBeauty Distribuidora"
+                title="Mapa de localização - RmBeauty Distribuidora - Rua XV de Novembro 736, Sales/SP"
               ></iframe>
             </div>
           </Card>
