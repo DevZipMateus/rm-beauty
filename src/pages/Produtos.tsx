@@ -53,7 +53,7 @@ const Produtos = () => {
   ];
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5511947641998?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20este%20produto.', '_blank');
+    window.open('https://wa.me/5517981234748?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20este%20produto.', '_blank');
   };
 
   return (
