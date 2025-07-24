@@ -4,7 +4,7 @@ import { Instagram, ExternalLink, Heart } from 'lucide-react';
 
 const InstagramSection = () => {
   const handleInstagramClick = () => {
-    window.open('https://instagram.com/rmbeauty', '_blank');
+    window.open('https://www.instagram.com/rmbeauty.distr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', '_blank');
   };
 
   return (
@@ -66,7 +66,7 @@ const InstagramSection = () => {
               className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full shadow-lg group px-8 py-3"
             >
               <Instagram className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-              Seguir @rmbeauty
+              Seguir @rmbeauty.distr
               <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
