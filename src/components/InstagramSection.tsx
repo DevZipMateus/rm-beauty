@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Instagram, ExternalLink, Heart } from 'lucide-react';
 
@@ -43,7 +42,7 @@ const InstagramSection = () => {
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto">
                   <Heart className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">Dicas de Beleza</h3>
+                <h3 className="font-semibold text-foreground mb-2">Acompanhe as Novidades</h3>
                 <p className="text-muted-foreground text-sm">
                   Conteúdos exclusivos sobre tendências e cuidados com a beleza
                 </p>
