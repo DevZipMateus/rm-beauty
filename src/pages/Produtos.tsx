@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
+import Header from '@/components/Header';
 
 const Produtos = () => {
   useEffect(() => {
@@ -58,7 +59,8 @@ const Produtos = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-20">
+      <Header />
+      <div className="container mx-auto px-4 pt-32 pb-20">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Nossos Produtos
