@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
@@ -7,6 +8,7 @@ const Produtos = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
   const images = [
     "/lovable-uploads/1751640567044_1_scene_babasoul.png",
     "/lovable-uploads/1751640567388_2_fabulous_003.png", 
@@ -51,6 +53,13 @@ const Produtos = () => {
     "/lovable-uploads/Captura de tela de 2025-07-07 11-39-21.png",
     "/lovable-uploads/Captura de tela de 2025-07-07 11-39-30.png",
     "/lovable-uploads/Captura de tela de 2025-07-07 11-39-40.png",
+    "/lovable-uploads/f1ca5931-cea6-4423-8ffd-051c57d28a71.png",
+    "/lovable-uploads/eda47248-504c-402c-b79c-aa85d7a1032f.png",
+    "/lovable-uploads/d47732e9-54d4-4293-8163-29841302b75f.png",
+    "/lovable-uploads/7fc64f10-3ef9-4852-8386-77bb380fca86.png",
+    "/lovable-uploads/827487a0-441a-4a16-ac01-dd7a77b3fc83.png",
+    "/lovable-uploads/0307d86a-d6c2-48db-8230-020d239b44c0.png",
+    "/lovable-uploads/82a2d917-c69a-4356-b7d2-46d47a447547.png",
   ];
 
   const handleWhatsAppClick = () => {

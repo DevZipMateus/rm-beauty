@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import * as React from "react";
 import { Link } from 'react-router-dom';
@@ -48,6 +49,13 @@ const ProductCarousel = () => {
     "/lovable-uploads/1751640593267_35_dsc_6585.jpg",
     "/lovable-uploads/1751640594243_36_dsc_6622.jpg",
     "/lovable-uploads/1751640595154_37_dsc_6627.jpg",
+    "/lovable-uploads/f1ca5931-cea6-4423-8ffd-051c57d28a71.png",
+    "/lovable-uploads/eda47248-504c-402c-b79c-aa85d7a1032f.png",
+    "/lovable-uploads/d47732e9-54d4-4293-8163-29841302b75f.png",
+    "/lovable-uploads/7fc64f10-3ef9-4852-8386-77bb380fca86.png",
+    "/lovable-uploads/827487a0-441a-4a16-ac01-dd7a77b3fc83.png",
+    "/lovable-uploads/0307d86a-d6c2-48db-8230-020d239b44c0.png",
+    "/lovable-uploads/82a2d917-c69a-4356-b7d2-46d47a447547.png",
   ];
 
   useEffect(() => {
