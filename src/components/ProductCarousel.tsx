@@ -1,14 +1,16 @@
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as React from "react";
 import { Link } from 'react-router-dom';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import type { CarouselApi } from '@/components/ui/carousel';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, X } from 'lucide-react';
 
 const ProductCarousel = () => {
   const [api, setApi] = React.useState<CarouselApi>();
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const autoplayRef = useRef<NodeJS.Timeout>();
 
   const images = [
@@ -134,6 +136,10 @@ const ProductCarousel = () => {
     return () => stopAutoplay();
   }, [api]);
 
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/5511916967918?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20este%20produto.', '_blank');
+  };
+
   return (
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
@@ -168,11 +174,12 @@ const ProductCarousel = () => {
               <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
                 <div className="p-1">
                   <div className="bg-card rounded-lg shadow-sm border border-border overflow-hidden hover:shadow-md transition-shadow">
-                    <div className="aspect-square overflow-hidden">
+                    <div className="aspect-square overflow-hidden cursor-pointer">
                       <img 
                         src={image} 
                         alt={`Produto ${index + 1}`}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onClick={() => setSelectedImage(image)}
                       />
                     </div>
                   </div>
@@ -181,6 +188,42 @@ const ProductCarousel = () => {
             ))}
           </CarouselContent>
         </Carousel>
+
+        {/* Image Modal */}
+        <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+          <DialogContent className="max-w-4xl w-full p-0 bg-background border-border">
+            <div className="relative">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute top-4 right-4 z-10 bg-background/80 hover:bg-background"
+                onClick={() => setSelectedImage(null)}
+              >
+                <X className="h-4 w-4" />
+              </Button>
+              {selectedImage && (
+                <div className="flex flex-col">
+                  <div className="aspect-square overflow-hidden">
+                    <img 
+                      src={selectedImage} 
+                      alt="Produto expandido"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-6 text-center">
+                    <Button 
+                      onClick={handleWhatsAppClick}
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3"
+                    >
+                      Saiba Mais
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );

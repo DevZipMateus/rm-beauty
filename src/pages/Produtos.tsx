@@ -1,10 +1,13 @@
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ArrowLeft } from 'lucide-react';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { ArrowRight, ArrowLeft, X } from 'lucide-react';
 import Header from '@/components/Header';
 
 const Produtos = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -144,11 +147,12 @@ const Produtos = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {images.map((image, index) => (
             <div key={index} className="bg-card rounded-lg shadow-sm border border-border p-4 hover:shadow-md transition-shadow">
-              <div className="aspect-square overflow-hidden rounded-lg mb-4">
+              <div className="aspect-square overflow-hidden rounded-lg mb-4 cursor-pointer">
                 <img 
                   src={image} 
                   alt={`Produto ${index + 1}`}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  onClick={() => setSelectedImage(image)}
                 />
               </div>
               <h3 className="font-semibold text-foreground mb-2">Produto {index + 1}</h3>
@@ -162,6 +166,42 @@ const Produtos = () => {
             </div>
           ))}
         </div>
+
+        {/* Image Modal */}
+        <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+          <DialogContent className="max-w-4xl w-full p-0 bg-background border-border">
+            <div className="relative">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute top-4 right-4 z-10 bg-background/80 hover:bg-background"
+                onClick={() => setSelectedImage(null)}
+              >
+                <X className="h-4 w-4" />
+              </Button>
+              {selectedImage && (
+                <div className="flex flex-col">
+                  <div className="aspect-square overflow-hidden">
+                    <img 
+                      src={selectedImage} 
+                      alt="Produto expandido"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-6 text-center">
+                    <Button 
+                      onClick={handleWhatsAppClick}
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3"
+                    >
+                      Saiba Mais
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </DialogContent>
+        </Dialog>
         
         <div className="text-center mt-12">
           <Button 
