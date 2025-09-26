@@ -193,14 +193,6 @@ const ProductCarousel = () => {
         <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
           <DialogContent className="max-w-4xl w-full p-0 bg-background border-border">
             <div className="relative">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute top-4 right-4 z-10 bg-background/80 hover:bg-background"
-                onClick={() => setSelectedImage(null)}
-              >
-                <X className="h-4 w-4" />
-              </Button>
               {selectedImage && (
                 <div className="flex flex-col">
                   <div className="w-full max-h-[70vh] overflow-hidden flex items-center justify-center bg-muted/10">
