@@ -174,11 +174,11 @@ const ProductCarousel = () => {
               <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
                 <div className="p-1">
                   <div className="bg-card rounded-lg shadow-sm border border-border overflow-hidden hover:shadow-md transition-shadow">
-                    <div className="aspect-square overflow-hidden cursor-pointer">
+                    <div className="aspect-square overflow-hidden cursor-pointer bg-muted/10">
                       <img 
                         src={image} 
                         alt={`Produto ${index + 1}`}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                         onClick={() => setSelectedImage(image)}
                       />
                     </div>
@@ -203,11 +203,11 @@ const ProductCarousel = () => {
               </Button>
               {selectedImage && (
                 <div className="flex flex-col">
-                  <div className="aspect-square overflow-hidden">
+                  <div className="w-full max-h-[70vh] overflow-hidden flex items-center justify-center bg-muted/10">
                     <img 
                       src={selectedImage} 
                       alt="Produto expandido"
-                      className="w-full h-full object-cover"
+                      className="max-w-full max-h-full object-contain"
                     />
                   </div>
                   <div className="p-6 text-center">
