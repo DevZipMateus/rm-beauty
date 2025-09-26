@@ -195,11 +195,12 @@ const ProductCarousel = () => {
             <div className="relative">
               {selectedImage && (
                 <div className="flex flex-col">
-                  <div className="w-full max-h-[70vh] overflow-hidden flex items-center justify-center bg-muted/10">
+                  <div className="w-full p-4 flex items-center justify-center bg-background">
                     <img 
                       src={selectedImage} 
                       alt="Produto expandido"
-                      className="max-w-full max-h-full object-contain"
+                      className="max-w-full h-auto object-contain"
+                      style={{ maxHeight: '80vh' }}
                     />
                   </div>
                   <div className="p-6 text-center">
