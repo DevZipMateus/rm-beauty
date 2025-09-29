@@ -115,6 +115,9 @@ const Produtos = () => {
     "/lovable-uploads/produtos novos/img_4830.png",
   ];
 
+  console.log('Total images:', images.length);
+  console.log('First image path:', images[0]);
+
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/5511916967918?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20este%20produto.', '_blank');
   };
