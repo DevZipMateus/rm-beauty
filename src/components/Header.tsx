@@ -42,7 +42,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between">
-          <a href="#" className="relative z-20 flex items-center space-x-3">
+          <a href="/" className="relative z-20 flex items-center space-x-3">
             <img 
               src="/lovable-uploads/c1fe7bed-02ff-4ffc-aca3-e3500f3daae4.png" 
               alt="RmBeauty Logo" 
@@ -108,11 +108,11 @@ interface NavLinksProps {
 
 const NavLinks = ({ mobile, onClick }: NavLinksProps) => {
   const links = [
-    { name: 'Início', href: '#hero' },
-    { name: 'Sobre', href: '#about' },
-    { name: 'Serviços', href: '#services' },
+    { name: 'Início', href: '/#hero' },
+    { name: 'Sobre', href: '/#about' },
+    { name: 'Serviços', href: '/#services' },
     { name: 'Produtos', href: '/produtos' },
-    { name: 'Contato', href: '#contact' },
+    { name: 'Contato', href: '/#contact' },
   ];
 
   return (
