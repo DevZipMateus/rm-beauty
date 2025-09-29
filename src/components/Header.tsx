@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { Link, useLocation } from 'react-router-dom';
 import {
   Sheet,
   SheetContent,
@@ -42,7 +43,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between">
-          <a href="/" className="relative z-20 flex items-center space-x-3">
+          <Link to="/" className="relative z-20 flex items-center space-x-3">
             <img 
               src="/lovable-uploads/c1fe7bed-02ff-4ffc-aca3-e3500f3daae4.png" 
               alt="RmBeauty Logo" 
@@ -54,7 +55,7 @@ const Header = () => {
               </h1>
               <p className="text-xs text-muted-foreground hidden md:block">Distribuidora</p>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center space-x-1">
@@ -107,30 +108,63 @@ interface NavLinksProps {
 }
 
 const NavLinks = ({ mobile, onClick }: NavLinksProps) => {
+  const location = useLocation();
+  
   const links = [
-    { name: 'Início', href: '/#hero' },
-    { name: 'Sobre', href: '/#about' },
-    { name: 'Serviços', href: '/#services' },
-    { name: 'Produtos', href: '/produtos' },
-    { name: 'Contato', href: '/#contact' },
+    { name: 'Início', href: '/', type: 'internal' },
+    { name: 'Sobre', href: '/#about', type: 'anchor' },
+    { name: 'Serviços', href: '/#services', type: 'anchor' },
+    { name: 'Produtos', href: '/produtos', type: 'internal' },
+    { name: 'Contato', href: '/#contact', type: 'anchor' },
   ];
+
+  const handleAnchorClick = (href: string) => {
+    if (location.pathname !== '/') {
+      window.location.href = href;
+    } else {
+      const elementId = href.split('#')[1];
+      const element = document.getElementById(elementId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    if (onClick) onClick();
+  };
 
   return (
     <>
-      {links.map((link) => (
-        <a
-          key={link.name}
-          href={link.href}
-          className={`font-medium transition-all duration-300 px-3 py-2 rounded-md
-            ${mobile 
-              ? 'text-xl text-foreground hover:text-primary mb-2 w-full text-center py-3' 
-              : 'text-foreground/80 hover:text-primary hover:bg-secondary/50'
-            }`}
-          onClick={onClick}
-        >
-          {link.name}
-        </a>
-      ))}
+      {links.map((link) => {
+        if (link.type === 'internal') {
+          return (
+            <Link
+              key={link.name}
+              to={link.href}
+              className={`font-medium transition-all duration-300 px-3 py-2 rounded-md
+                ${mobile 
+                  ? 'text-xl text-foreground hover:text-primary mb-2 w-full text-center py-3' 
+                  : 'text-foreground/80 hover:text-primary hover:bg-secondary/50'
+                }`}
+              onClick={onClick}
+            >
+              {link.name}
+            </Link>
+          );
+        } else {
+          return (
+            <button
+              key={link.name}
+              onClick={() => handleAnchorClick(link.href)}
+              className={`font-medium transition-all duration-300 px-3 py-2 rounded-md border-none bg-transparent cursor-pointer
+                ${mobile 
+                  ? 'text-xl text-foreground hover:text-primary mb-2 w-full text-center py-3' 
+                  : 'text-foreground/80 hover:text-primary hover:bg-secondary/50'
+                }`}
+            >
+              {link.name}
+            </button>
+          );
+        }
+      })}
     </>
   );
 };
